@@ -5,4 +5,5 @@ This mod fixes leftover issues from the 1.19.4 damage tilt reimplementation, res
 This fixes the following:
 
 MC-259212 - Directional damage tilt is still used for non-directional damage sources after taking damage from a directional damage source
+
 MC-298499 - Damage tilt doesn't tilt from explosion source
