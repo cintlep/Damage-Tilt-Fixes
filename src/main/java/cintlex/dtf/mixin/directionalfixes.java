@@ -13,7 +13,7 @@ import org.spongepowered.asm.mixin.injection.Redirect;
 @Mixin(GameRenderer.class)
 public class directionalfixes {
     @Shadow @Final
-    private MinecraftClient client;
+    MinecraftClient client;
     private static DamageSource nondirectionaldamage = null;
     private static float randomleftright = 0.0f;
     @Redirect(
@@ -54,8 +54,7 @@ public class directionalfixes {
                 source.isOf(DamageTypes.THROWN) ||
                 source.isOf(DamageTypes.INDIRECT_MAGIC) ||
                 source.isOf(DamageTypes.EXPLOSION) ||
-                source.isOf(DamageTypes.PLAYER_EXPLOSION) ||
-                source.isOf(DamageTypes.WIND_CHARGE);
+                source.isOf(DamageTypes.PLAYER_EXPLOSION);
     }
 
     private boolean explosiondamage(DamageSource source) {
